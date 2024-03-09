@@ -7,4 +7,6 @@ declare module "@realply/linkedin-posts" {
     likes: number;
     comments: number;
   }
+  const _default: FakePost[];
+  export default _default;
 }

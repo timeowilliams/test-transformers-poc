@@ -2,15 +2,26 @@
   "name": "testtransformersjs-poc",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon dist/server.js",
+    "start:local": "nodemon server.js",
+    "start": "vercel",
+    "build": "tsc -outDir dist",
+    "production": "vercel prod"
   },
-  "author": "",
+  "author": "timeo",
   "license": "ISC",
   "dependencies": {
-    "@realply/linkedin-posts": "^1.5.0",
-    "@xenova/transformers": "^2.16.0"
+    "@realply/linkedin-posts": "^1.7.1",
+    "@xenova/transformers": "^2.16.0",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/express": "^4.17.21",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }

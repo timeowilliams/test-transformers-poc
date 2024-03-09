@@ -1,0 +1,30 @@
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "target": "ESNext"
+//     // ...other options
+//   },
+//   "ts-node": {
+//     "esm": true
+//   }
+// }
+
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "strict": true,
+    "skipLibCheck": true
+    // ... other options you might need
+  },
+  "include": [
+    "server.ts",
+    "runCreateEmbeddings.ts"
+    // "include": ["src/**/*.ts", "server.ts"]
+    // ... any other files or directories you want to include
+  ],
+  "exclude": ["node_modules", "dist"]
+}
