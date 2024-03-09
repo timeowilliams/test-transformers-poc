@@ -1,0 +1,16 @@
+{
+  "name": "testtransformersjs-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@realply/linkedin-posts": "^1.5.0",
+    "@xenova/transformers": "^2.16.0"
+  }
+}
