@@ -8,8 +8,8 @@
     "start:dev": "nodemon dist/server.js",
     "start:local": "nodemon server.js",
     "start": "vercel",
-    "build": "tsc -outDir dist",
-    "production": "vercel prod"
+    "production": "vercel --prod",
+    "if-ts-build": "tsc -outDir dist"
   },
   "author": "timeo",
   "license": "ISC",

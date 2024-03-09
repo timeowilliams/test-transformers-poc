@@ -21,8 +21,8 @@
     // ... other options you might need
   },
   "include": [
-    "server.ts",
-    "runCreateEmbeddings.ts"
+    // "server.ts",
+    // "runCreateEmbeddings.ts"
     // "include": ["src/**/*.ts", "server.ts"]
     // ... any other files or directories you want to include
   ],
