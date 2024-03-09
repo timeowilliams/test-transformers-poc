@@ -6,9 +6,18 @@ import {
   analyzeSentiment,
 } from "./runCreateEmbeddings.js";
 
+console.log("we are alive");
 const app = express();
 const port = process.env.PORT || 3000;
 
+const corsOptions = {
+  // TODO: Only allow all origins when running locally but restrict in production
+  origin: "*",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.get("/healthcheck", async (req, res) => {
