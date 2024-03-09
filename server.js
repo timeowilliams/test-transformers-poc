@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import fakePosts from "@realply/linkedin-posts";
+import dataset from "@realply/linkedin-posts";
 import {
   createBatchEmbeddings,
   analyzeSentiment,
@@ -28,16 +28,18 @@ app.post("/analyze-sentiment", async (req, res) => {
 });
 
 app.post("/create-batch-embeddings", async (req, res) => {
-  console.log("fakePosts length", fakePosts.length);
+  console.log("dataset length", dataset.length);
   try {
-    const postsArray = req.body.postsArray || fakePosts;
+    const postsArray = req.body.postsArray || dataset;
     if (!postsArray || !Array.isArray(postsArray)) {
       return res
         .status(400)
         .send({ error: "No valid array of posts provided for embeddings." });
     }
 
-    const results = await createBatchEmbeddings(postsArray);
+    const results = await createBatchEmbeddings(postsArray, 10, () =>
+      console.log("Finished"),
+    );
     res.send({ embeddings: results });
   } catch (error) {
     console.error(error);
