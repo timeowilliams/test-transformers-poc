@@ -70,6 +70,7 @@ export const createBatchEmbeddings = async (posts, batchSize, onDoneBatch) => {
       batch.map((post) => createEmbedding(post.content)),
     );
     console.log("embeddings are ", embeddings);
+
     results = await onDoneBatch(embeddings);
     console.log("results ", results);
   }
