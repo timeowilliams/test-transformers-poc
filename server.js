@@ -11,6 +11,11 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+app.get("/healthcheck", async (req, res) => {
+  console.log("Im alive");
+  res.send({ success: true });
+});
+
 app.post("/analyze-sentiment", async (req, res) => {
   console.info("sentiment analysis invoked");
   try {
